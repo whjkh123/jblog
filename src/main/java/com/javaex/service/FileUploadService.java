@@ -19,8 +19,12 @@ public class FileUploadService {
 
 		/* db에 저장할 정보 수집 */
 
+		/* 원본파일 */
+		String orgName = file.getOriginalFilename();
+		System.out.println("[FileUpload Service]: orgName = " + orgName);
+
 		/* 확장자 */
-		String exName = file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf("."));
+		String exName = orgName.substring(orgName.lastIndexOf("."));
 		System.out.println("[FileUpload Service]: exName = " + exName);
 
 		/* 서버에 저장할 이름 */

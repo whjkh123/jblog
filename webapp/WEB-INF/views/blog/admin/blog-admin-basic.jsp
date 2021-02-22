@@ -16,13 +16,13 @@
 	<div id="wrap">
 
 		<!-- 개인블로그 해더 -->
-
+		<c:import url="/WEB-INF/views/includes/blog-header.jsp"></c:import>
 
 		<div id="content">
 			<ul id="admin-menu" class="clearfix">
 				<li class="tabbtn selected"><a href="${pageContext.request.contextPath}/${authUser.id}/admin/basic">기본설정</a></li>
-				<li class="tabbtn"><a href="">카테고리</a></li>
-				<li class="tabbtn"><a href="">글작성</a></li>
+				<li class="tabbtn"><a href="${pageContext.request.contextPath}/${authUser.id}/admin/category">카테고리</a></li>
+				<li class="tabbtn"><a href="${pageContext.request.contextPath}/${authUser.id}/admin/postForm">글작성</a></li>
 			</ul>
 			<!-- //admin-menu -->
 
@@ -69,8 +69,7 @@
 
 
 		<!-- 개인블로그 푸터 -->
-
-
+		<c:import url="/WEB-INF/views/includes/blog-footer.jsp"></c:import>
 
 	</div>
 	<!-- //wrap -->
